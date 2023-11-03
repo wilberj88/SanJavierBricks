@@ -85,7 +85,7 @@ with col3:
                 },
                 "progress": {"show": "true", "width": 10},
                 "detail": {"valueAnimation": "true", "formatter": "{value}"},
-                "data": [{"value": 100, "name": "Nuevos Clientes"}],
+                "data": [{"value": 100, "name": "Humedad"}],
             }
         ],
     }
