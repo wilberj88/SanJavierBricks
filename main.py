@@ -5,12 +5,17 @@ import time
 import datetime
 import pandas as pd
 import numpy as np
+from PIL import Image
+
 
 # SETTING PAGE CONFIG TO WIDE MODE AND ADDING A TITLE AND FAVICON
 st.set_page_config(layout="wide", page_title="SanJavierBricks demo Novus", page_icon="🧱")
 
 st.title('SanJavierBricks 🧱 Novus Demo Exploratorio 1')
-st.image('https://github.com/wilberj88/SanJavierBricks/blob/main/SanJavierBricks.jpeg')
+
+image = Image.open('SanJavierBricks.jpeg')
+
+st.image(image, caption='Logo')
 
 
 st.title('Demo Cotización Personalizada 🧱 Al instante ⏲️')
