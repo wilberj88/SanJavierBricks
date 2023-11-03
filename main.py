@@ -3,6 +3,8 @@ from streamlit_extras.let_it_rain import rain
 import folium
 import time
 import datetime
+import pandas as pd
+import numpy as np
 
 # SETTING PAGE CONFIG TO WIDE MODE AND ADDING A TITLE AND FAVICON
 st.set_page_config(layout="wide", page_title="SanJavierBricks demo Novus", page_icon="🧱")
