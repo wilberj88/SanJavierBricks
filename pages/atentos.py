@@ -25,9 +25,9 @@ if "messages" not in st.session_state:
 # Display chat messages from history on app rerun
 for message in st.session_state.messages:
     with st.chat_message(message["user"]):
-        st.markdown(message["👋Bienenido a SanJavierBricks, dime cómo sueñas tu proyecto y te ayudaremos a la medida"])
+        st.markdown(message["👋Bienvenido a SanJavierBricks, dime cómo sueñas tu proyecto y te ayudaremos a la medida"])
 # React to user input
-if prompt := st.chat_input("👋I am your Butler today, please how can I help you?"):
+if prompt := st.chat_input("👋Bienvenido a SanJavierBricks, dime cómo sueñas tu proyecto y te ayudaremos a la medida"):
     # Display user message in chat message container
     st.chat_message("user").markdown(prompt)
     # Add user message to chat history
