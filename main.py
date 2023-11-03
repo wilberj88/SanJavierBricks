@@ -1,5 +1,8 @@
 import streamlit as st
 from streamlit_extras.let_it_rain import rain 
+import folium
+import time
+import datetime
 
 # SETTING PAGE CONFIG TO WIDE MODE AND ADDING A TITLE AND FAVICON
 st.set_page_config(layout="wide", page_title="SanJavierBricks demo Novus", page_icon="🧱")
@@ -48,16 +51,35 @@ d = st.slider('Cuántos años tiene el proyecto?', 0, 24)
 st.subheader('Ubicación')
 st.write('Selecciona en el mapa el lugar de tu proyecto')
 
+m = folium.Map(location=[10.4735, -73.2486], zoom_start=13)
+folium.Marker(
+    [10.47358, -73.248639], popup="Z1 PV1 PV1 COL Nacional Loperena 3de10K", tooltip="Z1 PV1 PV1 COL Nacional Loperena. 3K de 8K", icon=folium.Icon(icon='cloud')
+).add_to(m)
+
+
+
 st.subheader('Estilo')
 st.write('Selecciona el estilo de proyeto de tu mayor interés')
 
+option = st.selectbox(
+    'Cuál estilo quieres para tu proyecto?',
+    ('Clásico', 'Moderno', 'Ambiental'))
+st.write('You selected:', option)
 
 st.subheader('Colores')
 st.write('Selecciona la paleta de colores que mejor contraste con tu entorno y clima')
+option2 = st.selectbox(
+    'Cuál paleta de colores quieres para tu proyecto?',
+    ('Oscuros', 'Claros', 'Grises'))
+st.write('You selected:', option2)
 
 
 st.subheader('Acesorios')
 st.write('Selecciona los complementos que embellezcan y aumenten la vida útil de tu proyecto')
+option3 = st.selectbox(
+    'Cuáles accesorios quieres para tu proyecto?',
+    ('Canelones', 'Páneles', 'Sensores'))
+st.write('You selected:', option3)
 
 
 
@@ -74,6 +96,22 @@ if h:
         animation_length="infinite",
     )
     st.write('¡Tu cotización ha sido enviada a tu correo')
+    st.header("Diagnóstico de tu necesidad y riesgos climáticos")
+    st.subheader('Necesitas para tu proyecto')
+    col5, col6, col7, col8 = st.columns(4)
+    col5.metric("Ladrillos unitarios", "132457", "14%")
+    col6.metric("Cemento en kilos", "10456", "-18%")
+    col7.metric("Instaladores", "2", "13%")
+    col8.metric("Días", "7", "18%")
+    st.subheader('Nuestra cotización ha sido personalizada a tus riesgos climáticos:')
+    current_time = time.ctime()
+    st.write("At: ", current_time)
+    col1, col2, col3, col4 = st.columns(4)
+    col1.metric("Incendios", "57%", "14%")
+    col2.metric("Derrumbes", "25%", "-18%")
+    col3.metric("Inundaciones", "89%", "13%")
+    col4.metric("Huracanes", "45%", "18%")
+
 
 st.write('---')
 st.title('Gemelos Digitales')
