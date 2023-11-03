@@ -6,20 +6,7 @@ st.set_page_config(layout="wide", page_title="SanJavierBricks demo Novus", page_
 
 st.title('SanJavierBricks 🧱 Novus Demo')
 
-st.write('---')
-st.title('Gemelos Digitales')
-st.subheader(':yellow[Productos, Servicios, Procesos y Personal]👤')
 
-st.title('Servicios Web')
-st.subheader(':red[Venta Personalizada, Gestión Trabajadores, Mandos, Atentos] 🎯')
-
-st.title('MANDOS')
-st.subheader(':red[Productos, Ventas, Inventario, Trabajadores, Proveedores, Tendencias] 🎯')
-
-st.title('ATENTOS')
-st.subheader(':blue[Bienvenida con Cotización Personalizada, Atención al Cliente Personalizada ]👤')
-
-st.write('---')
 
 st.title('Demo Cotización Personalizada 🧱 Al instante ⏲️')
 
@@ -88,3 +75,17 @@ if h:
     )
     st.write('¡Tu cotización ha sido enviada a tu correo')
 
+st.write('---')
+st.title('Gemelos Digitales')
+st.subheader(':yellow[Productos, Servicios, Procesos y Personal]👤')
+
+st.title('Servicios Web')
+st.subheader(':red[Venta Personalizada, Gestión Trabajadores, Mandos, Atentos] 🎯')
+
+st.title('MANDOS')
+st.subheader(':red[Productos, Ventas, Inventario, Trabajadores, Proveedores, Tendencias] 🎯')
+
+st.title('ATENTOS')
+st.subheader(':blue[Bienvenida con Cotización Personalizada, Atención al Cliente Personalizada ]👤')
+
+st.write('---')
