@@ -15,7 +15,7 @@ import random
 st.set_page_config(layout="wide", page_title="ATENTOS Novus Hotel", page_icon="🧱")
 st.title('ATENTOS SanJavierBricks 🧱 Novus Demo')
 st.header('🤖🤵🏻Vendedor Virtual🤵🏻‍♂️🤖')
-video_file = open('myvideo.mp4', 'rb')
+video_file = open('atento1.mp4', 'rb')
 video_bytes = video_file.read()
 st.video(video_bytes)
 
