@@ -9,7 +9,7 @@ import numpy as np
 # SETTING PAGE CONFIG TO WIDE MODE AND ADDING A TITLE AND FAVICON
 st.set_page_config(layout="wide", page_title="SanJavierBricks demo Novus", page_icon="🧱")
 
-st.title('SanJavierBricks 🧱 Novus Demo')
+st.title('SanJavierBricks 🧱 Novus Demo Exploratorio 1')
 
 
 
