@@ -53,7 +53,7 @@ d = st.slider('Cuántos años tiene el proyecto?', 0, 24)
 st.subheader('Ubicación')
 st.write('Selecciona en el mapa el lugar del proveedor más cercano a tu proyecto')
 df = pd.DataFrame(
-    np.random.randn(1000, 2) / [50, 50] + [40.4165, -3.7025],
+    np.random.randn(100, 2) / [50, 50] + [40.4165, -3.7025],
     columns=['lat', 'lon'])
 
 st.map(df)
