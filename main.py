@@ -2,21 +2,26 @@ import streamlit as st
 from streamlit_extras.let_it_rain import rain 
 
 # SETTING PAGE CONFIG TO WIDE MODE AND ADDING A TITLE AND FAVICON
-st.set_page_config(layout="wide", page_title="Novus Hotel", page_icon="🛏️")
+st.set_page_config(layout="wide", page_title="SanJavierBricks demo Novus", page_icon="🧱")
 
-st.title('Novus Hotel 🛏️ Automated Cycle')
+st.title('SanJavierBricks 🧱 Novus Demo')
 
 st.write('---')
+st.title('Gemelos Digitales')
+st.subheader(':yellow[Productos, Servicios, Procesos y Personal]👤')
+
+st.title('Servicios Web')
+st.subheader(':red[Venta Personalizada, Gestión Trabajadores, Mandos, Atentos] 🎯')
 
 st.title('MANDOS')
-st.subheader(':red[Suites, Rooms, Beds, Staff, Expenditures, Savings] 🎯')
+st.subheader(':red[Productos, Ventas, Inventario, Trabajadores, Proveedores, Tendencias] 🎯')
 
 st.title('ATENTOS')
-st.subheader(':blue[New Sales, Confirmation, Welcoming & Support Clients]👤')
+st.subheader(':blue[Bienvenida con Cotización Personalizada, Atención al Cliente Personalizada ]👤')
 
 st.write('---')
 
-st.title('Configur your Novus Hotel 🛏️ right now ⏲️')
+st.title('Demo Cotización Personalizada 🧱 Al instante ⏲️')
 
 st.subheader('MANDOS')
 col1, col2 = st.columns(2)
