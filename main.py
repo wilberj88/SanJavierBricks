@@ -18,7 +18,7 @@ st.title('SanJavierBricks 🧱 Novus Demo Borrador')
 
 
 
-st.title('Demo Cotización Personalizada 🧱 Al instante ⏲️')
+st.title('Cotización Personalizada 🧱 Al instante ⏲️')
 
 st.subheader('Identificación, Tamaño y Financiación')
 col1, col2 = st.columns(2)
