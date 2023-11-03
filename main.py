@@ -23,70 +23,61 @@ st.write('---')
 
 st.title('Demo Cotización Personalizada 🧱 Al instante ⏲️')
 
-st.subheader('MANDOS')
+st.subheader('Identificación, Tamaño y Financiación')
 col1, col2 = st.columns(2)
 
 with col1:
     suits = st.selectbox(
-        "How many suits do you have?",
-        ("1", "2", "3", "4", "5"),
+        "Tipo de proyecto?",
+        ("Casa", "Piso", "Chalet", "Edificio", "Institución"),
     )
     rooms = st.radio(
-        "How many rooms do you have?",
-        options=['10', '15','20', '25', '30', '35', '40', '45', '50'],
+        "Cuántos Metros Cuadrados del terreno?",
+        options=['1000', '1500','2000', '2500', '3000', '3500', '4000', '4500', '5000'],
     )
     beds = st.selectbox(
-        "How many beds do you have?",
-        ("25", "50", "75", "100"),
+        "Cuántos metros cuadrados habilitados para el proyecto?",
+        ("250", "500", "750", "1000"),
     )
 
 with col2:
-    name = st.text_input('What is the name of your hotel?', '''
+    name = st.text_input('Cuál es el nombre del proyecto?', '''
     ''')
-    email = st.text_input('What is the email of the administrator?', '''
+    email = st.text_input('Cuál es tu correo Electrónico?', '''
     ''')
-    bank_account =  st.text_input('Type your bank account:', '''
+    bank_account =  st.text_input('Número Telefónico?', '''
     ''')
-    phone =  st.text_input('Type your phone number', '''
+    phone =  st.text_input('Quiénes serán los usuarios del proyecto?', '''
     ''')
-    a = st.selectbox('How many beds for staff:', ['25', '50', '75', '100', '200'])
+    a = st.selectbox('Forma de pago preferida:', ['Efectivo', 'Tarjeta', 'ContraEntrega', 'Cuotas a SanJavierBricks'])
+
+c = st.selectbox('Necesitas financiación?:', ['Yes', 'No'])
+
+b = st.selectbox('Cuota máxima mensual que te puedes permitir?:', ['10.000€', '25.000€', '50.000€', '75.000€', '100.000€'])
+
+d = st.slider('Cuántos años tiene el proyecto?', 0, 24)
 
 
-b = st.selectbox('Monthly average expenditures by all the beds:', ['10.000€', '25.000€', '50.000€', '75.000€', '100.000€'])
-c = st.selectbox('Do you have budget for ads?:', ['Yes', 'No'])
+st.subheader('Ubicación')
+st.write('Selecciona en el mapa el lugar de tu proyecto')
 
-d = st.slider('How old are the locacies in years?', 0, 24)
-
-st.subheader('ATENTOS')
-col3, col4 = st.columns(2)
-
-with col3:
-    mood = st.selectbox(
-        "What mood do you prefer for your virtual staff?",
-        ("Elegant", "Friendly", "Formal", "Neutro", "Informal"),
-    )
-    channels = st.radio(
-        "What channels do you want to use for confirmations?",
-        options=['email', 'phone', 'twice'],
-    )
-    welcoming = st.selectbox(
-        "What kind of welcoming do you prefer to offer?",
-        ("Cold", "Neutro", "Warm"),
-    )
-
-with col4:
-    suit_price = st.text_input('What is the day price of suits?', '''
-    ''')
-    room_price = st.text_input('What is the day price of the rooms?', '''
-    ''')
-    rentability_goal =  st.text_input('What is your rentability goal?', '''
-    ''')
-    target =  st.text_input('What is your target?', '''
-    ''')
-    manifiesto = st.selectbox('Do you have support manifiesto?', ['Yes', 'No'])
+st.subheader('Estilo')
+st.write('Selecciona el estilo de proyeto de tu mayor interés')
 
 
-h = st.button('Crear Novus Hotel 🛏️ YA')
+st.subheader('Colores')
+st.write('Selecciona la paleta de colores que mejor contraste con tu entorno y clima')
+
+
+st.subheader('Acesorios')
+st.write('Selecciona los complementos que embellezcan y aumenten la vida útil de tu proyecto')
+
+
+
+
+
+
+h = st.button('Crear Tu Cotización de SanJavierBricks 🧱 YA')
 
 if h:
     rain(
@@ -95,5 +86,5 @@ if h:
         falling_speed=5,
         animation_length="infinite",
     )
-    st.write('¡Novus Hotel en construcción! Accede a los MANDOS y ATENTOS de tu <<', name, '>> con el código de confirmación enviado a <<', email, '>>')
+    st.write('¡Tu cotización ha sido enviada a tu correo')
 
