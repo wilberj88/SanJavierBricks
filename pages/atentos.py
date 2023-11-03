@@ -12,9 +12,9 @@ import requests
 import random
 
 # SETTING PAGE CONFIG TO WIDE MODE AND ADDING A TITLE AND FAVICON
-st.set_page_config(layout="wide", page_title="ATENTOS Novus Hotel", page_icon="🛏️")
-st.title('ATENTOS 🛏️ Novus Hotel')
-st.header('🤖🤵🏻Virtual Butlers🤵🏻‍♂️🤖')
+st.set_page_config(layout="wide", page_title="ATENTOS Novus Hotel", page_icon="🧱")
+st.title('ATENTOS SanJavierBricks 🧱 Novus Demo')
+st.header('🤖🤵🏻Vendedor Virtual🤵🏻‍♂️🤖')
 
 current_time = time.ctime()
 st.write("In real time operation at: ", current_time)
@@ -25,7 +25,7 @@ if "messages" not in st.session_state:
 # Display chat messages from history on app rerun
 for message in st.session_state.messages:
     with st.chat_message(message["user"]):
-        st.markdown(message["👋I am your Butler today, please how can I help you?"])
+        st.markdown(message["👋Bienenido a SanJavierBricks, dime cómo sueñas tu proyecto y te ayudaremos a la medida"])
 # React to user input
 if prompt := st.chat_input("👋I am your Butler today, please how can I help you?"):
     # Display user message in chat message container
@@ -40,9 +40,9 @@ if prompt := st.chat_input("👋I am your Butler today, please how can I help yo
         full_response = ""
         assistant_response = random.choice(
             [
-                "The confirmation code has sent you to your email. Check, type and open your door",
-                "Your Reservation Starts Tomorrow. Please confirmn here:",
-                "Welcome to Tarragona Novus Hotel 🛏️, what kind of room do you want?",
+                "Te enviaré a tu correo la propuesta formal para confirmación",
+                "Empecemos por lo primero, cómo se llama tu proyecto?",
+                "Con gusto lo asesoraremos de la mejor manera desde SanJavierBricks 🧱",
             ]
         )
         # Simulate stream of response with milliseconds delay
