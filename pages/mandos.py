@@ -11,9 +11,9 @@ from pytrends.request import TrendReq
 import requests
 
 # SETTING PAGE CONFIG TO WIDE MODE AND ADDING A TITLE AND FAVICON
-st.set_page_config(layout="wide", page_title="MANDOS Novus Hotel", page_icon="🛏️")
+st.set_page_config(layout="wide", page_title="MANDOS Novus SanJavierBricks", page_icon="🧱")
 
-st.title('MANDOS 🛏️ Novus Hotel')
+st.title('MANDOS 🧱 Novus SanJavierBricks')
 current_time = time.ctime()
 st.write("In real time monitoring at: ", current_time)
 
@@ -21,11 +21,11 @@ st.write("In real time monitoring at: ", current_time)
 st.header('Operation')
 colored_header(
     label="Key Performance Indicators",
-    description="Plans, Tasks & Results",
+    description="Ventas, Ganancias & Costos",
     color_name="violet-70",
 )
 topic = st.selectbox("Choose Topic to Monitor:",
-        ("Suits", "Rooms", "Beds", "Staff", "Expenditures", "Savings", "Profits"),
+        ("Suits", "Ladrillo1", "Ladrillo2", "Ladrillo3", "Ladrillo4", "Ladrillo5", "Ladrillo6"),
     )
 
 col1, col2, col3 = st.columns(3)
@@ -43,7 +43,7 @@ with col1:
                 },
                 "progress": {"show": "true", "width": 10},
                 "detail": {"valueAnimation": "true", "formatter": "{value}"},
-                "data": [{"value": 85, "name": "Reservations"}],
+                "data": [{"value": 85, "name": "Meta Ventas Mes"}],
             }
         ],
     }
@@ -64,7 +64,7 @@ with col2:
                 },
                 "progress": {"show": "true", "width": 10},
                 "detail": {"valueAnimation": "true", "formatter": "{value}"},
-                "data": [{"value": 70, "name": "Ocupation"}],
+                "data": [{"value": 70, "name": "Rentabilidad Minima"}],
             }
         ],
     }
@@ -85,7 +85,7 @@ with col3:
                 },
                 "progress": {"show": "true", "width": 10},
                 "detail": {"valueAnimation": "true", "formatter": "{value}"},
-                "data": [{"value": 100, "name": "Cleaning"}],
+                "data": [{"value": 100, "name": "Nuevos Clientes"}],
             }
         ],
     }
@@ -100,8 +100,8 @@ colored_header(
 #ALARMS CONFIGURATION
 BASE_URL = "https://api.openweathermap.org/data/2.5/weather?"
 API_KEY = "146090ad17fa8843bc9eca97c53926b4"
-sity1 = "New York"
-sity2 = "Amsterdam"
+sity1 = "Madrid"
+sity2 = "Londres"
 URL1 = BASE_URL + "q=" + sity1 + "&appid=" + API_KEY
 URL2 = BASE_URL + "q=" + sity2 + "&appid=" + API_KEY
 response1 = requests.get(URL1)
@@ -139,7 +139,7 @@ pytrends = TrendReq(hl='en-US', tz=360)
 col4, col5, col6 = st.columns(3)
 
 with col4:
-    st.write("🇺🇸 Top10 Trending Search in last hour")
+    st.write("🇺🇸 Top10 Global Trending Search in last hour")
     # Google Trends data
     df1 = pytrends.trending_searches(pn='united_states')
     st.dataframe(df1.head(10))
@@ -232,41 +232,41 @@ with col8:
     st.write('🌹 Speech to Persuade NOW')
     with st.expander("About Yesterday:"):
         st.subheader('For Womens')
-        st.write('Yesterday the rain could´t stopped you. Today you could everything. Visit Novus Hotel 🛏️')
+        st.write('Yesterday the rain could´t stopped you. Today you could everything.')
         st.subheader('For Mens')
-        st.write('You miss the sun of yesterday as you miss your exgirlfriend. Forget all. Visit Novus Hotel 🛏️')
+        st.write('You miss the sun of yesterday as you miss your exgirlfriend. Forget all.')
         
     with st.expander("About Today:"):
         st.subheader('For Womens')
-        st.write('Even rain can´t stop you. Come here. Visit Novus Hotel 🛏️')
+        st.write('Even rain can´t stop you. Come here.')
         st.subheader('For Mens')
-        st.write('Don´t let the rain stop you. Come here. Visit Novus Hotel 🛏️')
+        st.write('Don´t let the rain stop you. Come here.')
         
     with st.expander("About Tomorrow:"):
         st.subheader('For Womens')
-        st.write('Come to Novus Hotel 🛏️ and sing with us tomorrow about fridays life in our Karaoke Room')
+        st.write('Come and sing with us tomorrow about fridays life in our Karaoke Room')
         st.subheader('For Mens')
-        st.write('Save 30% reserving today your suit for tomorrow. Just do it now. Reserve Novus Hotel 🛏️')
+        st.write('Save 30% reserving today your suit for tomorrow. Just do it now.')
 
 
 with col9:
     st.write('💰 Price Suggestions')
     with st.expander("TODAY:"):
-        st.subheader('Suits')
+        st.subheader('Tonelada de Ladrillos1')
         st.write('1000€ per day')
         st.subheader('Rooms')
         st.write('500€ per day')
         st.subheader('Beds')
         st.write('250€ per day')
-    with st.expander("TOMORROW:"):
-        st.subheader('Suits')
+    with st.expander("MAÑANA"):
+        st.subheader('Tonelada de Ladrillos2')
         st.write('1500€ per day')
         st.subheader('Rooms')
         st.write('600€ per day')
         st.subheader('Beds')
         st.write('350€ per day')
-    with st.expander("NEXT WEEK:"):
-        st.subheader('Suits')
+    with st.expander("PRÓXIMA SEMANA"):
+        st.subheader('Tonelada de Ladrillos3')
         st.write('900€ per day')
         st.subheader('Rooms')
         st.write('400€ per day')
