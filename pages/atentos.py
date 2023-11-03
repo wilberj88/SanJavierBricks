@@ -15,7 +15,7 @@ import random
 st.set_page_config(layout="wide", page_title="ATENTOS Novus Hotel", page_icon="🧱")
 st.title('ATENTOS SanJavierBricks 🧱 Novus Demo')
 st.header('🤖🤵🏻Vendedor Virtual🤵🏻‍♂️🤖')
-st.video("https://www.canva.com/projects/videos/VAFywjGaj-8")
+st.video("https://github.com/wilberj88/SanJavierBricks/blob/main/pages/atento1.mp4")
 
 current_time = time.ctime()
 st.write("In real time operation at: ", current_time)
