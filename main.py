@@ -11,11 +11,11 @@ from PIL import Image
 # SETTING PAGE CONFIG TO WIDE MODE AND ADDING A TITLE AND FAVICON
 st.set_page_config(layout="wide", page_title="SanJavierBricks demo Novus", page_icon="🧱")
 
-st.title('SanJavierBricks 🧱 Novus Demo Exploratorio 1')
-
 image = Image.open('SanJavierBricks.jpeg')
 
-st.image(image, caption='Logo')
+st.image(image, caption='Demo Exploratorio 1')
+st.title('SanJavierBricks 🧱 Novus Demo Borrador')
+
 
 
 st.title('Demo Cotización Personalizada 🧱 Al instante ⏲️')
