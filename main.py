@@ -10,7 +10,7 @@ import numpy as np
 st.set_page_config(layout="wide", page_title="SanJavierBricks demo Novus", page_icon="🧱")
 
 st.title('SanJavierBricks 🧱 Novus Demo Exploratorio 1')
-
+st.image('https://github.com/wilberj88/SanJavierBricks/blob/main/SanJavierBricks.jpeg')
 
 
 st.title('Demo Cotización Personalizada 🧱 Al instante ⏲️')
