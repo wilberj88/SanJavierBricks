@@ -49,12 +49,13 @@ d = st.slider('Cuántos años tiene el proyecto?', 0, 24)
 
 
 st.subheader('Ubicación')
-st.write('Selecciona en el mapa el lugar de tu proyecto')
+st.write('Selecciona en el mapa el lugar del proveedor más cercano a tu proyecto')
+df = pd.DataFrame(
+    np.random.randn(1000, 2) / [50, 50] + [40.4165, -3.7025],
+    columns=['lat', 'lon'])
 
-m = folium.Map(location=[10.4735, -73.2486], zoom_start=13)
-folium.Marker(
-    [10.47358, -73.248639], popup="Z1 PV1 PV1 COL Nacional Loperena 3de10K", tooltip="Z1 PV1 PV1 COL Nacional Loperena. 3K de 8K", icon=folium.Icon(icon='cloud')
-).add_to(m)
+st.map(df)
+
 
 
 
