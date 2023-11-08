@@ -24,6 +24,112 @@ st.title('Novus - Demo Borrador 2 🧱')
 st.title('Centrales de Mando 📈')
 
 st.subheader('Plan de Producción en Planta Zamora🏭')
+current_time = time.ctime()
+st.write("Siendo HOY y AHORA las: ", current_time)
+meta_zona_1 = 10290
+meta_zona_2 = 11986
+meta_zona_3 = 11368
+meta_zona_4 = 14018
+meta_zona_5 = 14036
+meta_zona_6 = 5241
+meta_zona_7 = 3112
+meta_zona_8 = 110
+meta_zona_9 = 7338
+st.header('Ritmo de Producción Diaria con 3 turnos')
+options = {
+            "title": {"text": "Votos x Zonas"},
+            "tooltip": {
+                "trigger": "axis",
+                "axisPointer": {"type": "cross", "label": {"backgroundColor": "#6a7985"}},
+            },
+            "legend": {"data": ["Producto_9", "Producto_8", "Producto_7", "Producto_6", "Producto_5", "Producto_4", "Producto_3", "Producto_2", "Producto_1"]},
+            "toolbox": {"feature": {"saveAsImage": {}}},
+            "grid": {"left": "3%", "right": "4%", "bottom": "3%", "containLabel": True},
+            "xAxis": [
+                {
+                    "type": "category",
+                    "boundaryGap": False,
+                    "data": ["00:00", "04:00", "08:00", "12:00", "16:00", "20:00", "23:59"],
+                }
+            ],
+            "yAxis": [{"type": "value"}],
+            "series": [
+                {
+                    "name": "Producto_9",
+                    "type": "line",
+                    "stack": "总量",
+                    "areaStyle": {},
+                    "emphasis": {"focus": "series"},
+                    "data": [meta_zona_9*0.1, meta_zona_9*0.2, meta_zona_9*0.35, meta_zona_9*0.45, meta_zona_9*0.5, meta_zona_9*0.75, meta_zona_9],
+                },
+                {
+                    "name": "Producto_8",
+                    "type": "line",
+                    "stack": "总量",
+                    "areaStyle": {},
+                    "emphasis": {"focus": "series"},
+                    "data": [meta_zona_8*0.1, meta_zona_8*0.2, meta_zona_8*0.35, meta_zona_8*0.45, meta_zona_8*0.5, meta_zona_8*0.75, meta_zona_8],
+                },
+                {
+                    "name": "Producto_7",
+                    "type": "line",
+                    "stack": "总量",
+                    "areaStyle": {},
+                    "emphasis": {"focus": "series"},
+                    "data": [meta_zona_7*0.1, meta_zona_7*0.2, meta_zona_7*0.35, meta_zona_7*0.45, meta_zona_7*0.5, meta_zona_7*0.75, meta_zona_7],
+                },
+                  {
+                    "name": "Producto_6",
+                    "type": "line",
+                    "stack": "总量",
+                    "areaStyle": {},
+                    "emphasis": {"focus": "series"},
+                    "data": [meta_zona_6*0.1, meta_zona_6*0.2, meta_zona_6*0.35, meta_zona_6*0.45, meta_zona_6*0.5, meta_zona_6*0.75, meta_zona_6],
+                },
+                 {
+                    "name": "Producto_5",
+                    "type": "line",
+                    "stack": "总量",
+                    "areaStyle": {},
+                    "emphasis": {"focus": "series"},
+                    "data": [meta_zona_5*0.1, meta_zona_5*0.2, meta_zona_5*0.35, meta_zona_5*0.45, meta_zona_5*0.5, meta_zona_5*0.75, meta_zona_5],
+                },
+                  {
+                    "name": "Producto_4",
+                    "type": "line",
+                    "stack": "总量",
+                    "areaStyle": {},
+                    "emphasis": {"focus": "series"},
+                    "data": [meta_zona_4*0.1, meta_zona_4*0.2, meta_zona_4*0.35, meta_zona_4*0.45, meta_zona_4*0.5, meta_zona_4*0.75, meta_zona_4],
+                },
+                  {
+                    "name": "Producto_3",
+                    "type": "line",
+                    "stack": "总量",
+                    "areaStyle": {},
+                    "emphasis": {"focus": "series"},
+                    "data": [meta_zona_3*0.1, meta_zona_3*0.2, meta_zona_3*0.35, meta_zona_3*0.45, meta_zona_3*0.5, meta_zona_3*0.75, meta_zona_3],
+                },
+                  {
+                    "name": "Producto_2",
+                    "type": "line",
+                    "stack": "总量",
+                    "areaStyle": {},
+                    "emphasis": {"focus": "series"},
+                    "data": [meta_zona_2*0.1, meta_zona_2*0.2, meta_zona_2*0.35, meta_zona_2*0.45, meta_zona_2*0.5, meta_zona_2*0.75, meta_zona_2],
+                },
+                  {
+                    "name": "Producto_1",
+                    "type": "line",
+                    "stack": "总量",
+                    "areaStyle": {},
+                    "emphasis": {"focus": "series"},
+                    "data": [meta_zona_1*0.1, meta_zona_1*0.2, meta_zona_1*0.35, meta_zona_1*0.45, meta_zona_1*0.5, meta_zona_1*0.75, meta_zona_1],
+                },
+            ],
+        }
+st_echarts(options=options, height="400px") 
+
 colored_header(
     label="Turnos de Cocción y Curado de Ladrillos",
     description="Tareas por días y horas",
