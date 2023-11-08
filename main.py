@@ -501,58 +501,12 @@ with col1:
     )
 
 with col2:
-    email = st.text_input('Cuál es tu correo Electrónico?', '''
+    email = st.text_input('Cuál es el correo Electrónico?', '''
     ''')
     a = st.selectbox('Selecciona un Turno de Preferencia:', ['Mañana', 'Tarde', 'Noche', 'Madrugada'])
 
 
-st.subheader('Cumplimiento Tareas Turnos')
-
-
-
-
-
-
-st.subheader('Ubicación')
-st.write('Selecciona en el mapa el lugar del proveedor más cercano a tu proyecto')
-df = pd.DataFrame(
-    np.random.randn(100, 2) / [50, 50] + [40.4165, -3.7025],
-    columns=['lat', 'lon'])
-
-st.map(df)
-
-
-
-
-st.subheader('Estilo')
-st.write('Selecciona el estilo de proyeto de tu mayor interés')
-
-option = st.selectbox(
-    'Cuál estilo quieres para tu proyecto?',
-    ('Clásico', 'Moderno', 'Ambiental'))
-st.write('You selected:', option)
-
-st.subheader('Colores')
-st.write('Selecciona la paleta de colores que mejor contraste con tu entorno y clima')
-option2 = st.selectbox(
-    'Cuál paleta de colores quieres para tu proyecto?',
-    ('Oscuros', 'Claros', 'Grises'))
-st.write('You selected:', option2)
-
-
-st.subheader('Acesorios')
-st.write('Selecciona los complementos que embellezcan y aumenten la vida útil de tu proyecto')
-option3 = st.selectbox(
-    'Cuáles accesorios quieres para tu proyecto?',
-    ('Canelones', 'Páneles', 'Sensores'))
-st.write('You selected:', option3)
-
-
-
-
-
-
-h = st.button('Crear Tu Cotización de SanJavierBricks 🧱 YA')
+h = st.button('Crear Plan de Entrenamiento Personalizado YA')
 
 if h:
     rain(
@@ -561,35 +515,27 @@ if h:
         falling_speed=5,
         animation_length="infinite",
     )
-    st.write('¡Tu cotización ha sido enviada a tu correo')
-    st.header("Diagnóstico de tu necesidad y riesgos climáticos")
-    st.subheader('Necesitas para tu proyecto')
-    col5, col6, col7, col8 = st.columns(4)
-    col5.metric("Ladrillos unitarios", "132457", "14%")
-    col6.metric("Termoceratres", "10456", "-18%")
-    col7.metric("Bovedilla", "2", "13%")
-    col8.metric("Klinker", "7", "18%")
-    st.subheader('Nuestra cotización ha sido personalizada a tus riesgos climáticos:')
-    current_time = time.ctime()
-    st.write("At: ", current_time)
-    col1, col2, col3, col4 = st.columns(4)
-    col1.metric("Incendios", "57%", "14%")
-    col2.metric("Derrumbes", "25%", "-18%")
-    col3.metric("Inundaciones", "89%", "13%")
-    col4.metric("Huracanes", "45%", "18%")
+    st.write('¡Plan de entrenamiento enviado al correo! Prepárate para superar los exámenes de habilitación')
+
+st.subheader('Cumplimiento Tareas Turnos')
+colored_header(
+    label="Examen de Habilitación",
+    description="Por Roles y Turnos",
+    color_name="violet-70",
+)
 
 
-st.write('---')
-st.title('Gemelos Digitales')
-st.subheader(':yellow[Productos, Servicios, Procesos y Personal]👤')
 
-st.title('Servicios Web')
-st.subheader(':red[Venta Personalizada, Gestión Trabajadores, Mandos, Atentos] 🎯')
+picture = st.camera_input("Responde en 30 segundos cada una de las siguientes 10 preguntas: ¿____Bla Bla bla___?")
 
-st.title('MANDOS')
-st.subheader(':red[Productos, Ventas, Inventario, Trabajadores, Proveedores, Tendencias] 🎯')
+if picture:
+    st.image(picture)
+    st.write('Cargar Respuesta 1 a 10 🤖')
 
-st.title('ATENTOS')
-st.subheader(':blue[Bienvenida con Cotización Personalizada, Atención al Cliente Personalizada ]👤')
+colx, coly, colz = st.columns(3)
+colx = st.checkbox('Aprobada Habilitación')
+coly = st.checkbox('Llegada a Turno')
+colz = st.checkbox('Cumplimiento Tarea Día')
 
-st.write('---')
+
+
