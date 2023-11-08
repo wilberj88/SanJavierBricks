@@ -385,13 +385,25 @@ render_heatmap_cartesian()
 
 
 st.subheader('Plan de Abastecimiento')
+
+my_grid = grid(3, 3, vertical_align="bottom")
+# Row 1:
+my_grid.selectbox("Indica una Producto", ["Producto_1", "Producto_2", "Producto_3", "Producto_4"])
+my_grid.selectbox("Indica tipo de Proveedor", ["Local", "Inter Comunitario", "Europeo", "TransOceánico"])
+my_grid.selectbox("Indica un Fecha", ["Hoy", "Mañana", "Próxima Semana"])
+
+# Row 2:
+my_grid.button("Activar Mensajes Equipos", use_container_width=True)
+my_grid.button("Activar Mensajes Proveedores", use_container_width=True)
+my_grid.button("Activar Mensajes Clientes", use_container_width=True)
+
    
 fig1 = go.Figure(data=[go.Sankey(
   node = dict(
     pad = 15,
     thickness = 20,
     line = dict(color = "black", width = 0.5),
-    label = ["Fuente1", "Fuente2", "Fuente 3", "Categoría1", "Categoría2", "Producto1"],
+    label = ["Fuente1", "Fuente2", "Fuente 3", "Proveedor_1", "Proveedor_2", "Producto1"],
     color = "blue"
   ),
   link = dict(
