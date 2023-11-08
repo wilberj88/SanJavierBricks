@@ -25,7 +25,7 @@ st.title('Centrales de Mando 📈')
 
 st.subheader('Plan de Producción en Planta Zamora🏭')
 colored_header(
-    label="Cocción y Curado de Ladrillos",
+    label="Turnos de Cocción y Curado de Ladrillos",
     description="Tareas por días y horas",
     color_name="violet-70",
 )
@@ -280,43 +280,25 @@ render_heatmap_cartesian()
 
 st.subheader('Plan de Abastecimiento')
    
-col4, col5 = st.columns(2)
-with col4:
-    fig1 = go.Figure(data=[go.Sankey(
-      node = dict(
-        pad = 15,
-        thickness = 20,
-        line = dict(color = "black", width = 0.5),
-        label = ["Fuente1", "Fuente2", "Fuente 3", "Categoría1", "Categoría2", "Producido1"],
-        color = "blue"
-      ),
-      link = dict(
-        source = [0, 1, 2, 3, 4], # indices correspond to labels, eg A1, A2, A1, B1, ...
-        target = [3, 4, 3, 5, 5],
-        value = [8, 4, 5, 13, 4]
-    ))])
-  
-    fig1.update_layout(title_text="Ingresos 2023", font_size=10)
-    st.plotly_chart(fig1, theme="streamlit")
+fig1 = go.Figure(data=[go.Sankey(
+  node = dict(
+    pad = 15,
+    thickness = 20,
+    line = dict(color = "black", width = 0.5),
+    label = ["Fuente1", "Fuente2", "Fuente 3", "Categoría1", "Categoría2", "Producido1"],
+    color = "blue"
+  ),
+  link = dict(
+    source = [0, 1, 2, 3, 4], # indices correspond to labels, eg A1, A2, A1, B1, ...
+    target = [3, 4, 3, 5, 5],
+    value = [8, 4, 5, 13, 4]
+))])
 
-with col5:
-    fig1 = go.Figure(data=[go.Sankey(
-      node = dict(
-        pad = 15,
-        thickness = 20,
-        line = dict(color = "black", width = 0.5),
-        label = ["Egresos Totales", "Necesidades", "Gastos", "Inversiones", "Vivienda", "Estudio", "Alimentación", "Transporte", "Entretenimiento", "Viajes", "Acciones", "Activos", "Criptomonedas", "Bonos"],
-        color = "red"
-      ),
-      link = dict(
-        source = [0, 0, 0, 1, 1, 1, 1, 2, 2, 3, 3, 3, 3], # indices correspond to labels, eg A1, A2, A1, B1, ...
-        target = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
-        value = [44, 44, 44, 10, 20, 10, 22, 22, 10, 14, 10, 10, 10]
-    ))])
-  
-    fig1.update_layout(title_text="Egresos 2023", font_size=10)
-    st.plotly_chart(fig1, theme="streamlit")
+fig1.update_layout(title_text="Materias Primas e Insumos", font_size=10)
+st.plotly_chart(fig1, theme="streamlit")
 
+
+    
 st.subheader('Control de Calidad')
 
 
