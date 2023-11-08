@@ -285,7 +285,7 @@ fig1 = go.Figure(data=[go.Sankey(
     pad = 15,
     thickness = 20,
     line = dict(color = "black", width = 0.5),
-    label = ["Fuente1", "Fuente2", "Fuente 3", "Categoría1", "Categoría2", "Producido1"],
+    label = ["Fuente1", "Fuente2", "Fuente 3", "Categoría1", "Categoría2", "Producto1"],
     color = "blue"
   ),
   link = dict(
