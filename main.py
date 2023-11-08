@@ -487,43 +487,30 @@ with col3:
 
 st.title('Asistentes Virtuales 🤖 24/7/365 ⏲️')
 st.subheader('Entrenamiento')
+
+col1, col2 = st.columns(2)
+
+with col1:
+    rol = st.selectbox(
+        "Tipo de Rol?",
+        ("Operario", "Auditor", "Inspector", "Administrador"),
+    )
+    experiencia = st.radio(
+        "Cuántos meses de experiencia en el Rol?",
+        options=['0', 'Menos de 6','Entre 6 y 12', 'Entre 13 y 24', 'Entre 25 y 36', 'Más de 37'],
+    )
+
+with col2:
+    email = st.text_input('Cuál es tu correo Electrónico?', '''
+    ''')
+    a = st.selectbox('Selecciona un Turno de Preferencia:', ['Mañana', 'Tarde', 'Noche', 'Madrugada'])
+
+
 st.subheader('Cumplimiento Tareas Turnos')
 
 
 
 
-col1, col2 = st.columns(2)
-
-with col1:
-    suits = st.selectbox(
-        "Tipo de proyecto?",
-        ("Casa", "Piso", "Chalet", "Edificio", "Institución"),
-    )
-    rooms = st.radio(
-        "Cuántos Metros Cuadrados del terreno?",
-        options=['1000', '1500','2000', '2500', '3000', '3500', '4000', '4500', '5000'],
-    )
-    beds = st.selectbox(
-        "Cuántos metros cuadrados habilitados para el proyecto?",
-        ("250", "500", "750", "1000"),
-    )
-
-with col2:
-    name = st.text_input('Cuál es el nombre del proyecto?', '''
-    ''')
-    email = st.text_input('Cuál es tu correo Electrónico?', '''
-    ''')
-    bank_account =  st.text_input('Número Telefónico?', '''
-    ''')
-    phone =  st.text_input('Quiénes serán los usuarios del proyecto?', '''
-    ''')
-    a = st.selectbox('Forma de pago preferida:', ['Efectivo', 'Tarjeta', 'ContraEntrega', 'Cuotas a SanJavierBricks'])
-
-c = st.selectbox('Necesitas financiación?:', ['Yes', 'No'])
-
-b = st.selectbox('Cuota máxima mensual que te puedes permitir?:', ['10.000€', '25.000€', '50.000€', '75.000€', '100.000€'])
-
-d = st.slider('Cuántos años tiene el proyecto?', 0, 24)
 
 
 st.subheader('Ubicación')
