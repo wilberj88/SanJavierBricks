@@ -17,11 +17,11 @@ st.set_page_config(layout="wide", page_title="SanJavierBricks demo Novus", page_
 image = Image.open('SanJavierBricks.jpeg')
 
 st.image(image, caption='Demo Exploratorio 2: Cocción, Curado, Entrenamiento y Turnos. Planta Zamora 🏭')
-st.title('SanJavierBricks 🧱 Novus Demo Borrador')
+st.title('Novus - Demo Borrador 2 🧱')
 
 
 
-st.title('Centrales de Mando 🧱 Al instante ⏲️')
+st.title('Centrales de Mando 📈')
 
 st.subheader('Plan de Producción en Planta Zamora🏭')
 colored_header(
@@ -287,7 +287,7 @@ with col4:
         pad = 15,
         thickness = 20,
         line = dict(color = "black", width = 0.5),
-        label = ["Fuente1", "Fuente2", "Fuente 3", "Online", "Offline", "Ingresos Totales"],
+        label = ["Fuente1", "Fuente2", "Fuente 3", "Categoría1", "Categoría2", "Producido1"],
         color = "blue"
       ),
       link = dict(
@@ -320,7 +320,7 @@ with col5:
 st.subheader('Control de Calidad')
 
 
-st.title('Asistentes Virtuales 🧱 24/7/365 ⏲️')
+st.title('Asistentes Virtuales 🤖 24/7/365 ⏲️')
 st.subheader('Entrenamiento')
 st.subheader('Cumplimiento Tareas Turnos')
 
