@@ -1,12 +1,14 @@
 import streamlit as st
 from streamlit_extras.let_it_rain import rain 
 from streamlit_echarts import st_echarts
+import plotly.graph_objects as go
 import folium
 import time
 import datetime
 import pandas as pd
 import numpy as np
 from PIL import Image
+from streamlit_extras.colored_header import colored_header
 
 
 # SETTING PAGE CONFIG TO WIDE MODE AND ADDING A TITLE AND FAVICON
@@ -21,7 +23,13 @@ st.title('SanJavierBricks 🧱 Novus Demo Borrador')
 
 st.title('Centrales de Mando 🧱 Al instante ⏲️')
 
-st.subheader('Plan de Producción en Cocción y Curado')
+st.subheader('Plan de Producción')
+colored_header(
+    label="Plan de Cocción y Curado",
+    description="Tareas por días y horas",
+    color_name="violet-70",
+)
+
 
 def render_heatmap_cartesian():
     hours = [
@@ -271,7 +279,43 @@ render_heatmap_cartesian()
 
 
 st.subheader('Plan de Abastecimiento')
+   
+col4, col5 = st.columns(2)
+with col4:
+    fig1 = go.Figure(data=[go.Sankey(
+      node = dict(
+        pad = 15,
+        thickness = 20,
+        line = dict(color = "black", width = 0.5),
+        label = ["Fuente1", "Fuente2", "Fuente 3", "Online", "Offline", "Ingresos Totales"],
+        color = "blue"
+      ),
+      link = dict(
+        source = [0, 1, 2, 3, 4], # indices correspond to labels, eg A1, A2, A1, B1, ...
+        target = [3, 4, 3, 5, 5],
+        value = [8, 4, 5, 13, 4]
+    ))])
+  
+    fig1.update_layout(title_text="Ingresos 2023", font_size=10)
+    st.plotly_chart(fig1, theme="streamlit")
 
+with col5:
+    fig1 = go.Figure(data=[go.Sankey(
+      node = dict(
+        pad = 15,
+        thickness = 20,
+        line = dict(color = "black", width = 0.5),
+        label = ["Egresos Totales", "Necesidades", "Gastos", "Inversiones", "Vivienda", "Estudio", "Alimentación", "Transporte", "Entretenimiento", "Viajes", "Acciones", "Activos", "Criptomonedas", "Bonos"],
+        color = "red"
+      ),
+      link = dict(
+        source = [0, 0, 0, 1, 1, 1, 1, 2, 2, 3, 3, 3, 3], # indices correspond to labels, eg A1, A2, A1, B1, ...
+        target = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+        value = [44, 44, 44, 10, 20, 10, 22, 22, 10, 14, 10, 10, 10]
+    ))])
+  
+    fig1.update_layout(title_text="Egresos 2023", font_size=10)
+    st.plotly_chart(fig1, theme="streamlit")
 
 st.subheader('Control de Calidad')
 
