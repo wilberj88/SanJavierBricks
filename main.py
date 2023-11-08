@@ -9,6 +9,7 @@ import pandas as pd
 import numpy as np
 from PIL import Image
 from streamlit_extras.colored_header import colored_header
+from streamlit_extras.grid import grid
 
 
 # SETTING PAGE CONFIG TO WIDE MODE AND ADDING A TITLE AND FAVICON
