@@ -13,14 +13,28 @@ st.set_page_config(layout="wide", page_title="SanJavierBricks demo Novus", page_
 
 image = Image.open('SanJavierBricks.jpeg')
 
-st.image(image, caption='Demo Exploratorio 1')
+st.image(image, caption='Demo Exploratorio 2: Cocción, Curado, Entrenamiento y Turnos')
 st.title('SanJavierBricks 🧱 Novus Demo Borrador')
 
 
 
-st.title('Cotización Personalizada 🧱 Al instante ⏲️')
+st.title('Centrales de Mando 🧱 Al instante ⏲️')
 
-st.subheader('Identificación, Tamaño y Financiación')
+st.subheader('Plan de Producción en Cocción y Curado')
+
+st.subheader('Plan de Abastecimiento')
+
+
+st.subheader('Control de Calidad')
+
+
+st.title('Asistentes Virtuales 🧱 24/7/365 ⏲️')
+st.subheader('Entrenamiento')
+st.subheader('Cumplimiento Tareas Turnos')
+
+
+
+
 col1, col2 = st.columns(2)
 
 with col1:
