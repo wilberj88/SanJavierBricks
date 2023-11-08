@@ -301,6 +301,70 @@ st.plotly_chart(fig1, theme="streamlit")
     
 st.subheader('Control de Calidad')
 
+col1, col2, col3 = st.columns(3)
+with col1:
+  acelerometro1 = {
+        "tooltip": {"formatter": "{a} <br/>{b} : {c}%"},
+        "series": [
+            {
+                "name": "Pressure",
+                "type": "gauge",
+                "axisLine": {
+                    "lineStyle": {
+                        "width": 10,
+                    },
+                },
+                "progress": {"show": "true", "width": 10},
+                "detail": {"valueAnimation": "true", "formatter": "{value}"},
+                "data": [{"value": 30, "name": "Humedad"}],
+            }
+        ],
+    }
+
+  st_echarts(options=acelerometro1)
+
+with col2:
+  acelerometro2 = {
+        "tooltip": {"formatter": "{a} <br/>{b} : {c}%"},
+        "series": [
+            {
+                "name": "Pressure",
+                "type": "gauge",
+                "axisLine": {
+                    "lineStyle": {
+                        "width": 10,
+                    },
+                },
+                "progress": {"show": "true", "width": 10},
+                "detail": {"valueAnimation": "true", "formatter": "{value}"},
+                "data": [{"value": 50, "name": "Temperatura"}],
+            }
+        ],
+    }
+
+  st_echarts(options=acelerometro2)
+
+with col3:
+  acelerometro3 = {
+        "tooltip": {"formatter": "{a} <br/>{b} : {c}%"},
+        "series": [
+            {
+                "name": "Pressure",
+                "type": "gauge",
+                "axisLine": {
+                    "lineStyle": {
+                        "width": 10,
+                    },
+                },
+                "progress": {"show": "true", "width": 10},
+                "detail": {"valueAnimation": "true", "formatter": "{value}"},
+                "data": [{"value": 80, "name": "Densidad"}],
+            }
+        ],
+    }
+  st_echarts(options=acelerometro3)
+
+
 
 st.title('Asistentes Virtuales 🤖 24/7/365 ⏲️')
 st.subheader('Entrenamiento')
