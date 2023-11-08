@@ -16,16 +16,16 @@ st.set_page_config(layout="wide", page_title="SanJavierBricks demo Novus", page_
 
 image = Image.open('SanJavierBricks.jpeg')
 
-st.image(image, caption='Demo Exploratorio 2: Cocción, Curado, Entrenamiento y Turnos')
+st.image(image, caption='Demo Exploratorio 2: Cocción, Curado, Entrenamiento y Turnos. Planta Zamora 🏭')
 st.title('SanJavierBricks 🧱 Novus Demo Borrador')
 
 
 
 st.title('Centrales de Mando 🧱 Al instante ⏲️')
 
-st.subheader('Plan de Producción')
+st.subheader('Plan de Producción en Planta Zamora🏭')
 colored_header(
-    label="Plan de Cocción y Curado",
+    label="Cocción y Curado de Ladrillos",
     description="Tareas por días y horas",
     color_name="violet-70",
 )
