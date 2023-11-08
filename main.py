@@ -23,7 +23,7 @@ st.title('Novus - Demo Borrador 2 🧱')
 
 st.title('Centrales de Mando 📈')
 
-st.subheader('Plan de Producción en Planta Zamora🏭')
+st.subheader('Plan de Producción Diario en Planta Zamora🏭')
 current_time = time.ctime()
 st.write("Siendo HOY y AHORA las: ", current_time)
 meta_zona_1 = 10290
@@ -35,7 +35,7 @@ meta_zona_6 = 5241
 meta_zona_7 = 3112
 meta_zona_8 = 110
 meta_zona_9 = 7338
-st.header('Ritmo de Producción Diaria con 3 turnos')
+st.header('Ritmo de Producción por turnos para 9 productos')
 options = {
             "title": {"text": "Votos x Zonas"},
             "tooltip": {
