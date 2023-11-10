@@ -17,16 +17,28 @@ st.set_page_config(layout="wide", page_title="SanJavierBricks demo Novus", page_
 
 image = Image.open('SanJavierBricks.jpeg')
 
-st.image(image, caption='Demo Exploratorio 2: Cocción, Curado, Entrenamiento y Turnos. Planta Zamora 🏭')
-st.title('Novus - Demo Borrador 2 🧱')
+st.image(image, caption='Demo Exploratorio 2: Históricos, Cocción, Curado, Entrenamiento y Turnos. Planta Zamora 🏭')
+st.title('Novus - Prototipo Propuesta Borrador 🧱')
 
+st.write('---')
 
+st.title('Base de Datos Histórica: consolidación y análisis de tendencias')
+st.subheader(':red[Paradas de planta 2015-2023, Proyecciones 2024 y Requisitos para Productividad al 60%] 🎯')
+
+st.title('CENTRAL DE MONITOREO')
+st.subheader(':blue[Productividad de Cocción y Curado, Alarmas y Recomendaciones Inteligentes]💪')
+
+st.title('ATENTO AUDITOR')
+st.subheader(':blue[Entrenamiento, Evaluación y Monitoreo de Talentos en Turnos] 🔎⏰🏆')
+
+st.write('---')
 
 st.title('Centrales de Mando 📈')
-
-st.subheader('Plan de Producción Diario en Planta Zamora🏭')
 current_time = time.ctime()
 st.write("Siendo HOY y AHORA las: ", current_time)
+
+
+st.subheader('Plan de Producción Diario en Planta Zamora🏭')
 meta_zona_1 = 10290
 meta_zona_2 = 11986
 meta_zona_3 = 11368
