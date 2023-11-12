@@ -435,9 +435,9 @@ colored_header(
 
 my_grid = grid(3, 3, vertical_align="bottom")
 # Row 1:
-my_grid.selectbox("Indica una Producto", ["Producto_1", "Producto_2", "Producto_3", "Producto_4"])
-my_grid.selectbox("Indica tipo de Proveedor", ["Arcillas", "Energía", "Agua", "Herramientas"])
-my_grid.selectbox("Indica un Fecha", ["Hoy", "Mañana", "Próxima Semana"])
+a = my_grid.selectbox("Indica una Producto", ["Producto_1", "Producto_2", "Producto_3", "Producto_4"])
+b = my_grid.selectbox("Indica tipo de Proveedor", ["Arcillas", "Energía", "Agua", "Herramientas"])
+c = my_grid.selectbox("Indica un Fecha", ["Hoy", "Mañana", "Próxima Semana"])
 
 # Row 2:
 my_grid.button("Activar Protocolo Alarma a Equipos en Turno", use_container_width=True)
@@ -445,22 +445,27 @@ my_grid.button("Activar Protocolo Alarma a Proveedores", use_container_width=Tru
 my_grid.button("Activar Protocolo Alarma a Clientes", use_container_width=True)
 
    
-fig1 = go.Figure(data=[go.Sankey(
-  node = dict(
-    pad = 15,
-    thickness = 20,
-    line = dict(color = "black", width = 0.5),
-    label = ["Carbon", "Coke", "Biomasa", "No Renovable", "Renovable", "Calor"],
-    color = "blue"
-  ),
-  link = dict(
-    source = [0, 1, 2, 3, 4], # indices correspond to labels, eg A1, A2, A1, B1, ...
-    target = [3, 4, 3, 5, 5],
-    value = [8, 4, 5, 13, 4]
-))])
-
-fig1.update_layout(title_text="Materias Primas e Insumos", font_size=10)
-st.plotly_chart(fig1, theme="streamlit")
+if a and b and c:
+    colx, coly = st.columns(2)
+    with colx:
+        st.subheader("Alarma de Inflación Proyectada 12 meses")
+    with coly:
+        fig1 = go.Figure(data=[go.Sankey(
+          node = dict(
+            pad = 15,
+            thickness = 20,
+            line = dict(color = "black", width = 0.5),
+            label = ["Carbon", "Coke", "Biomasa", "No Renovable", "Renovable", "Calor"],
+            color = "blue"
+          ),
+          link = dict(
+            source = [0, 1, 2, 3, 4], # indices correspond to labels, eg A1, A2, A1, B1, ...
+            target = [3, 4, 3, 5, 5],
+            value = [8, 4, 5, 13, 4]
+        ))])
+        
+        fig1.update_layout(title_text="Participación Energética en Calderas", font_size=10)
+        st.plotly_chart(fig1, theme="streamlit")
 
 
     
@@ -468,9 +473,5 @@ st.plotly_chart(fig1, theme="streamlit")
 
 
 
-colx, coly, colz = st.columns(3)
-colx = st.checkbox('Aprobada Habilitación')
-coly = st.checkbox('Llegada a Turno')
-colz = st.checkbox('Cumplimiento Tarea Día')
 
 
