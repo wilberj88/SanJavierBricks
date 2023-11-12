@@ -115,41 +115,50 @@ with col5:
     st_echarts(options=options, height="400px") 
     
 with col6:
-    option = {
-        "legend": {"top": "bottom"},
-        "toolbox": {
-            "show": True,
-            "feature": {
-                "mark": {"show": True},
-                "dataView": {"show": True, "readOnly": False},
-                "restore": {"show": True},
-                "saveAsImage": {"show": True},
-            },
-        },
+    acelerometro1 = {
+        "tooltip": {"formatter": "{a} <br/>{b} : {c}%"},
         "series": [
             {
-                "name": "Participación de grupos de edades",
-                "type": "pie",
-                "radius": [50, 250],
-                "center": ["50%", "50%"],
-                "roseType": "area",
-                "itemStyle": {"borderRadius": 8},
-                "data": [
-                    {"value": 10, "name": "Hoy"},
-                    {"value": 9, "name": "Vs Ayer"},
-                    {"value": 8, "name": "Vs Semana Pasada"},
-                    {"value": 7, "name": "Vs Mes Pasado"},
-                    {"value": 6, "name": "Vs Año Pasado"},
-             
-                ],
+                "name": "Pressure",
+                "type": "gauge",
+                "axisLine": {
+                    "lineStyle": {
+                        "width": 10,
+                    },
+                },
+                "progress": {"show": "true", "width": 10},
+                "detail": {"valueAnimation": "true", "formatter": "{value}"},
+                "data": [{"value": 30, "name": "Humedad"}],
             }
         ],
     }
-    st_echarts(
-        options=option, height="400px",
-    )
+
+    st_echarts(options=acelerometro1)
+
+    acelerometro2 = {
+        "tooltip": {"formatter": "{a} <br/>{b} : {c}%"},
+        "series": [
+            {
+                "name": "Pressure",
+                "type": "gauge",
+                "axisLine": {
+                    "lineStyle": {
+                        "width": 10,
+                    },
+                },
+                "progress": {"show": "true", "width": 10},
+                "detail": {"valueAnimation": "true", "formatter": "{value}"},
+                "data": [{"value": 50, "name": "Temperatura"}],
+            }
+        ],
+    }
+
+    st_echarts(options=acelerometro2)
 
 
+    
+
+    
 colored_header(
     label="Turnos de Cocción y Curado de Ladrillos",
     description="Tareas por días y horas",
@@ -550,5 +559,39 @@ colx = st.checkbox('Aprobada Habilitación')
 coly = st.checkbox('Llegada a Turno')
 colz = st.checkbox('Cumplimiento Tarea Día')
 
+
+option = {
+        "legend": {"top": "bottom"},
+        "toolbox": {
+            "show": True,
+            "feature": {
+                "mark": {"show": True},
+                "dataView": {"show": True, "readOnly": False},
+                "restore": {"show": True},
+                "saveAsImage": {"show": True},
+            },
+        },
+        "series": [
+            {
+                "name": "Participación de grupos de edades",
+                "type": "pie",
+                "radius": [50, 250],
+                "center": ["50%", "50%"],
+                "roseType": "area",
+                "itemStyle": {"borderRadius": 8},
+                "data": [
+                    {"value": 10, "name": "Hoy"},
+                    {"value": 9, "name": "Vs Ayer"},
+                    {"value": 8, "name": "Vs Semana Pasada"},
+                    {"value": 7, "name": "Vs Mes Pasado"},
+                    {"value": 6, "name": "Vs Año Pasado"},
+             
+                ],
+            }
+        ],
+    }
+    st_echarts(
+        options=option, height="600px",
+    )
 
 
