@@ -501,20 +501,20 @@ if a and b and c:
     
     with colz:
        fig1 = go.Figure(data=[go.Sankey(
-          node = dict(
+            node = dict(
             pad = 15,
             thickness = 20,
             line = dict(color = "black", width = 0.5),
             label = ["Carbon", "Biomasa", "Coke", "No Renovable", "Renovable", "Calor"],
             color = "blue"
-          ),
-          link = dict(
+            ),
+            link = dict(
             source = [0, 1, 2, 3, 4], # indices correspond to labels, eg A1, A2, A1, B1, ...
             target = [3, 4, 3, 5, 5],
             value = [8, 4, 5, 13, 4]
             ))])
-        fig1.update_layout(title_text="Participación Energética en Calderas", font_size=10)
-        st.plotly_chart(fig1, theme="streamlit")
+       fig1.update_layout(title_text="Participación Energética en Calderas", font_size=10)
+       st.plotly_chart(fig1, theme="streamlit")
 
 
 
