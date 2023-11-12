@@ -45,11 +45,7 @@ meta_zona_6 = 5241
 meta_zona_7 = 3112
 meta_zona_8 = 110
 meta_zona_9 = 7338
-colored_header(
-    label="Producción Desagregada",
-    description="Por horas y productos",
-    color_name="violet-70",
-)
+
 col5, col6, col7 = st.columns(3)
 with col5:
     acelerometro1 = {
@@ -133,7 +129,7 @@ with col6:
                 },
             ],
         }
-    st_echarts(options=options, height="300px") 
+    st_echarts(options=options, height="400px") 
     
 with col7:
     acelerometro2 = {
