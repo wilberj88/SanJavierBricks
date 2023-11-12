@@ -15,9 +15,10 @@ from streamlit_extras.grid import grid
 # SETTING PAGE CONFIG TO WIDE MODE AND ADDING A TITLE AND FAVICON
 st.set_page_config(layout="wide", page_title="SanJavierBricks demo Novus", page_icon="🧱")
 
-image = Image.open('SanJavierBricks.jpeg')
+with st.sidebar:
+    image = Image.open('SanJavierBricks.jpeg')
+    st.image(image, caption='Demo Exploratorio 2: Históricos, Cocción, Curado, Entrenamiento y Turnos. Planta Zamora 🏭')
 
-st.image(image, caption='Demo Exploratorio 2: Históricos, Cocción, Curado, Entrenamiento y Turnos. Planta Zamora 🏭')
 st.title('Novus - Prototipo Propuesta Borrador 🧱')
 
 st.write('---')
