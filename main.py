@@ -451,8 +451,8 @@ if a and b and c:
         st.subheader("Inflación Energética Proyectada a 12 meses")
         def render_basic_radar():
             option = {
-                "title": {"text": "Zonas Alcaldía Valledupar 🗳️"},
-                "legend": {"data": ["Ganador 2015", "2do 2015", "3ro 2015"]},
+                "title": {"text": "%💲"},
+                "legend": {"data": ["Renovables", "Mixto", "No Renovables"]},
                 "radar": {
                     "indicator": [
                         {"name": "Zona 1", "max": 14000},
