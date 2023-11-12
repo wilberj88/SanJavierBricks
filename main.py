@@ -112,7 +112,7 @@ with col5:
                 },
             ],
         }
-    st_echarts(options=options, height="500px") 
+    st_echarts(options=options, height="600px") 
     
 with col6:
     acelerometro1 = {
