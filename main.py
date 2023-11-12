@@ -24,6 +24,12 @@ st.title('Central de Mando Piloto - Planta Zamora 🧱')
 current_time = time.ctime()
 st.write("A día de hoy a las: ", current_time)
 
+colored_header(
+    label="KPIs",
+    description="En tiempo real",
+    color_name="violet-70",
+)
+
 col1, col2, col3, col4 = st.columns(4)
 col1.metric("Producción hoy", "200", "50%")
 col2.metric("Abastecimiento hoy", "80%", "-8%")
