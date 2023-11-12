@@ -54,7 +54,7 @@ with col5:
     option = {
     "xAxis": {
         "type": "category",
-        "data": ["Alistamiento", "Cocción", "Calidad1", "Curado", "Calidad2", "Empaque", "Almacecnamiento"],
+        "data": ["Hora_1", "Hora_2", "Hora_3", "Hora_4", "Hora_5", "Hora_6", "Hora_7"],
     },
     "yAxis": {"type": "value"},
     "series": [
