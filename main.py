@@ -182,7 +182,7 @@ with col6:
         ],
     }
     st_echarts(
-        options=option, height="600px",
+        options=option, height="400px",
     )
 
 
