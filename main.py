@@ -20,6 +20,11 @@ with st.sidebar:
     st.image(image, caption='Demo 3: Productividad Actual Vs Histórica. Planta Zamora 🏭')
 
 st.title('Central de Mando Piloto - Planta Zamora 🧱')
+col1, col2, col3, col4 = st.columns(4)
+    col1.metric("Producción hoy", "200", "50%")
+    col2.metric("Abastecimiento hoy", "80%", "-8%")
+    col3.metric("Costos Calderas hoy", "125%", "25%")
+    col4.metric("Rentabilidad hoy", "15%", "3%")
 
 st.write('---')
 
