@@ -436,7 +436,7 @@ colored_header(
 my_grid = grid(3, 3, vertical_align="bottom")
 # Row 1:
 my_grid.selectbox("Indica una Producto", ["Producto_1", "Producto_2", "Producto_3", "Producto_4"])
-my_grid.selectbox("Indica tipo de Proveedor", ["Local", "Inter Comunitario", "Europeo", "TransOceánico"])
+my_grid.selectbox("Indica tipo de Proveedor", ["Arcillas", "Energía", "Agua", "Herramientas"])
 my_grid.selectbox("Indica un Fecha", ["Hoy", "Mañana", "Próxima Semana"])
 
 # Row 2:
@@ -450,7 +450,7 @@ fig1 = go.Figure(data=[go.Sankey(
     pad = 15,
     thickness = 20,
     line = dict(color = "black", width = 0.5),
-    label = ["Biomasa", "Coke", "Carbon", "Renovables", "Agua", "Calor"],
+    label = ["Carbon", "Coke", "Biomasa", "No Renovable", "Renovable", "Calor"],
     color = "blue"
   ),
   link = dict(
