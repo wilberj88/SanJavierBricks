@@ -70,7 +70,7 @@ with col5:
 
 with col6:
     options = {
-            "title": {"text": "Cerámicas"},
+            "title": {"text": "🧱"},
             "tooltip": {
                 "trigger": "axis",
                 "axisPointer": {"type": "cross", "label": {"backgroundColor": "#6a7985"}},
@@ -129,7 +129,7 @@ with col6:
                 },
             ],
         }
-    st_echarts(options=options, height="400px") 
+    st_echarts(options=options, height="300px") 
     
 with col7:
     acelerometro2 = {
