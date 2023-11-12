@@ -446,12 +446,12 @@ my_grid.button("Activar Protocolo Alarma a Clientes", use_container_width=True)
 
    
 if a and b and c:
-    colx, coly = st.columns(2)
+    colx, coly, colz = st.columns(3)
     with colx:
-        st.subheader("Inflación Energética Proyectada a 12 meses")
+        st.subheader("Inflación Energética")
         def render_basic_radar():
             option = {
-                "title": {"text": "%💲"},
+                "title": {"text": "Proyectada a 12 meses 💲"},
                 "legend": {"data": ["Renovables", "Mixto", "No Renovables"]},
                 "radar": {
                     "indicator": [
@@ -509,7 +509,12 @@ if a and b and c:
         fig1.update_layout(title_text="Participación Energética en Calderas", font_size=10)
         st.plotly_chart(fig1, theme="streamlit")
 
-
+    with colz:
+        st.subheader("Tasas de Interes - Euribor")
+        colz.metric("Renovables todo", "10%", "1%")
+        colz.metric("Renovables medio", "13%", "5%")
+        colz.metric("Renovables bajo", "15%", "3%")
+        colz.metric("No Renovable", "17%", "3%")
     
 
 
