@@ -149,7 +149,7 @@ with col6:
                 },
             ],
         }
-    st_echarts(options=options, height="600px") 
+    st_echarts(options=options, height="620px") 
     
 with col7:
     meta = 35000
