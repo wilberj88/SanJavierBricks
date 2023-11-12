@@ -48,6 +48,26 @@ meta_zona_9 = 7338
 
 col5, col6, col7 = st.columns(3)
 with col5:
+    acelerometro2 = {
+        "tooltip": {"formatter": "{a} <br/>{b} : {c}%"},
+        "series": [
+            {
+                "name": "Pressure",
+                "type": "gauge",
+                "axisLine": {
+                    "lineStyle": {
+                        "width": 10,
+                    },
+                },
+                "progress": {"show": "true", "width": 10},
+                "detail": {"valueAnimation": "true", "formatter": "{value}"},
+                "data": [{"value": 50, "name": "Temperatura"}],
+            }
+        ],
+    }
+
+    st_echarts(options=acelerometro2)
+    
     acelerometro1 = {
         "tooltip": {"formatter": "{a} <br/>{b} : {c}%"},
         "series": [
@@ -129,28 +149,21 @@ with col6:
                 },
             ],
         }
-    st_echarts(options=options, height="300px") 
+    st_echarts(options=options, height="500px") 
     
 with col7:
-    acelerometro2 = {
-        "tooltip": {"formatter": "{a} <br/>{b} : {c}%"},
-        "series": [
-            {
-                "name": "Pressure",
-                "type": "gauge",
-                "axisLine": {
-                    "lineStyle": {
-                        "width": 10,
-                    },
-                },
-                "progress": {"show": "true", "width": 10},
-                "detail": {"valueAnimation": "true", "formatter": "{value}"},
-                "data": [{"value": 50, "name": "Temperatura"}],
-            }
-        ],
+    meta = 35000
+    option = {
+    "xAxis": {
+        "type": "category",
+        "data": ["9am", "10am", "11am", "12md", "1pm", "2pm", "4pm"],
+    },
+    "yAxis": {"type": "value"},
+    "series": [{"data": [meta*0.1, meta*0.2, meta*0.35, meta*0.5, meta*0.75, meta*0.9, meta], "type": "line"}],
     }
-
-    st_echarts(options=acelerometro2)
+    st_echarts(
+        options=option, height="500px",
+    )
 
 
     
