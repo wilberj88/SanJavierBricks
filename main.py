@@ -52,14 +52,13 @@ colored_header(
 )
 col5, col6 = st.columns(2)
 with col5:
-    
     options = {
             "title": {"text": "Cerámicas"},
             "tooltip": {
                 "trigger": "axis",
                 "axisPointer": {"type": "cross", "label": {"backgroundColor": "#6a7985"}},
             },
-            "legend": {"data": ["Producto_9", "Producto_8", "Producto_7", "Producto_6", "Producto_5", "Producto_4", "Producto_3", "Producto_2", "Producto_1"]},
+            "legend": {"data": ["Producto_5", "Producto_4", "Producto_3", "Producto_2", "Producto_1"]},
             "toolbox": {"feature": {"saveAsImage": {}}},
             "grid": {"left": "3%", "right": "4%", "bottom": "3%", "containLabel": True},
             "xAxis": [
@@ -72,38 +71,6 @@ with col5:
             "yAxis": [{"type": "value"}],
             "series": [
                 {
-                    "name": "Producto_9",
-                    "type": "line",
-                    "stack": "总量",
-                    "areaStyle": {},
-                    "emphasis": {"focus": "series"},
-                    "data": [meta_zona_9*0.1, meta_zona_9*0.2, meta_zona_9*0.35, meta_zona_9*0.45, meta_zona_9*0.5, meta_zona_9*0.75, meta_zona_9],
-                },
-                {
-                    "name": "Producto_8",
-                    "type": "line",
-                    "stack": "总量",
-                    "areaStyle": {},
-                    "emphasis": {"focus": "series"},
-                    "data": [meta_zona_8*0.1, meta_zona_8*0.2, meta_zona_8*0.35, meta_zona_8*0.45, meta_zona_8*0.5, meta_zona_8*0.75, meta_zona_8],
-                },
-                {
-                    "name": "Producto_7",
-                    "type": "line",
-                    "stack": "总量",
-                    "areaStyle": {},
-                    "emphasis": {"focus": "series"},
-                    "data": [meta_zona_7*0.1, meta_zona_7*0.2, meta_zona_7*0.35, meta_zona_7*0.45, meta_zona_7*0.5, meta_zona_7*0.75, meta_zona_7],
-                },
-                  {
-                    "name": "Producto_6",
-                    "type": "line",
-                    "stack": "总量",
-                    "areaStyle": {},
-                    "emphasis": {"focus": "series"},
-                    "data": [meta_zona_6*0.1, meta_zona_6*0.2, meta_zona_6*0.35, meta_zona_6*0.45, meta_zona_6*0.5, meta_zona_6*0.75, meta_zona_6],
-                },
-                 {
                     "name": "Producto_5",
                     "type": "line",
                     "stack": "总量",
