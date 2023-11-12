@@ -50,11 +50,11 @@ col5, col6, col7 = st.columns(3)
 with col5:
     
     meta = 35000
-    st.subheader("Turno Actual Vs Último")
+    st.subheader("Ritmo Turno Actual Vs Último")
     option = {
     "xAxis": {
         "type": "category",
-        "data": ["9am", "10am", "11am", "12md", "1pm", "2pm", "4pm"],
+        "data": ["Alistamiento", "Cocción", "Calidad1", "Curado", "Calidad2", "Empaque", "Almacecnamiento"],
     },
     "yAxis": {"type": "value"},
     "series": [
