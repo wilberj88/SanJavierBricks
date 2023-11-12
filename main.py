@@ -48,6 +48,25 @@ meta_zona_9 = 7338
 
 col5, col6, col7 = st.columns(3)
 with col5:
+    
+    meta = 35000
+    st.subheader("Turno Actual Vs Último")
+    option = {
+    "xAxis": {
+        "type": "category",
+        "data": ["9am", "10am", "11am", "12md", "1pm", "2pm", "4pm"],
+    },
+    "yAxis": {"type": "value"},
+    "series": [
+        {"data": [meta*0.1, meta*0.2, meta*0.35, meta*0.5, meta*0.75, meta*0.9, meta], "type": "line"},
+        {"data": [meta*0.15, meta*0.25, meta*0.4, meta*0.55, meta*0.75, meta*0.9, meta], "type": "line"},
+    ],
+    }
+    st_echarts(
+        options=option, height="625px",
+    )
+with col6:
+    
     st.subheader("Calderas")
     acelerometro2 = {
         "tooltip": {"formatter": "{a} <br/>{b} : {c}%"},
@@ -86,8 +105,8 @@ with col5:
     }
 
     st_echarts(options=acelerometro1)
-
-with col6:
+     
+with col7:
     st.subheader("Por Tipo de Cerámica")
     options = {
             "title": {"text": "🧱"},
@@ -149,33 +168,14 @@ with col6:
                 },
             ],
         }
-    st_echarts(options=options, height="600px") 
-    
-with col7:
-    meta = 35000
-    st.subheader("Turno Actual Vs Último")
-    option = {
-    "xAxis": {
-        "type": "category",
-        "data": ["9am", "10am", "11am", "12md", "1pm", "2pm", "4pm"],
-    },
-    "yAxis": {"type": "value"},
-    "series": [
-        {"data": [meta*0.1, meta*0.2, meta*0.35, meta*0.5, meta*0.75, meta*0.9, meta], "type": "line"},
-        {"data": [meta*0.15, meta*0.25, meta*0.4, meta*0.55, meta*0.75, meta*0.9, meta], "type": "line"},
-    ],
-    }
-    st_echarts(
-        options=option, height="620px",
-    )
-
+    st_echarts(options=options, height="600px")
 
     
 
     
 colored_header(
-    label="Turnos de Cocción y Curado de Ladrillos",
-    description="Tareas por días y horas",
+    label="Alarmas",
+    description="Operativas, Temporales y Climáticas",
     color_name="violet-70",
 )
 
