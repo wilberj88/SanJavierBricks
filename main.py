@@ -30,24 +30,6 @@ col2.metric("Abastecimiento hoy", "80%", "-8%")
 col3.metric("Costos Calderas hoy", "125%", "25%")
 col4.metric("Rentabilidad hoy", "15%", "3%")
 
-st.write('---')
-
-st.title('Base de Datos Histórica: consolidación y análisis de tendencias')
-st.subheader(':red[Paradas de planta 2015-2023, Proyecciones 2024 y Requisitos para Productividad al 60%] 🎯')
-
-st.title('CENTRAL DE MONITOREO')
-st.subheader(':blue[Productividad de Cocción y Curado, Alarmas y Recomendaciones Inteligentes]💪')
-
-st.title('ATENTO AUDITOR')
-st.subheader(':blue[Entrenamiento, Evaluación y Monitoreo de Talentos en Turnos] 🔎⏰🏆')
-
-st.write('---')
-
-st.title('Centrales de Mando 📈')
-current_time = time.ctime()
-st.write("Siendo HOY y AHORA las: ", current_time)
-
-
 st.subheader('Plan de Producción Diario en Planta Zamora🏭')
 meta_zona_1 = 10290
 meta_zona_2 = 11986
