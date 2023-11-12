@@ -17,7 +17,7 @@ st.set_page_config(layout="wide", page_title="SanJavierBricks demo Novus", page_
 
 with st.sidebar:
     image = Image.open('SanJavierBricks.jpeg')
-    st.image(image, caption='Demo Exploratorio 2: Históricos, Cocción, Curado, Entrenamiento y Turnos. Planta Zamora 🏭')
+    st.image(image, caption='Demo 3: Productividad Actual Vs Histórica. Planta Zamora 🏭')
 
 st.title('Novus - Prototipo Propuesta Borrador 🧱')
 
