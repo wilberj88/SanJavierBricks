@@ -457,7 +457,7 @@ if a and b and c:
         st.subheader("Inflación Energética")
         def render_basic_radar():
             option = {
-                "title": {"text": "Proyectada a 12 meses 💲"},
+                "title": {"text": "A 12 meses 💲"},
                 "legend": {"data": ["Renovables", "Mixto", "No Renovables"]},
                 "radar": {
                     "indicator": [
