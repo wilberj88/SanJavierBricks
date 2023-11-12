@@ -135,15 +135,12 @@ with col6:
                 "roseType": "area",
                 "itemStyle": {"borderRadius": 8},
                 "data": [
-                    {"value": 28789, "name": "18 a 25 años"},
-                    {"value": 33532, "name": "26 a 30 años"},
-                    {"value": 31805, "name": "31 a 35 años"},
-                    {"value": 39217, "name": "36 a 40 años"},
-                    {"value": 39268, "name": "41 a 45 años"},
-                    {"value": 14663, "name": "46 a 50 años"},
-                    {"value": 8707, "name": "51 a 55 años"},
-                    {"value": 307, "name": "56 a 60 años"},
-                    {"value": 20531, "name": "Más de 65 años"},
+                    {"value": 10, "name": "Hoy"},
+                    {"value": 9, "name": "Vs Ayer"},
+                    {"value": 8, "name": "Vs Semana Pasada"},
+                    {"value": 7, "name": "Vs Mes Pasado"},
+                    {"value": 6, "name": "Vs Año Pasado"},
+             
                 ],
             }
         ],
