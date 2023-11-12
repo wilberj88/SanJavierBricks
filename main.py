@@ -17,7 +17,7 @@ st.set_page_config(layout="wide", page_title="SanJavierBricks demo Novus", page_
 
 with st.sidebar:
     image = Image.open('SanJavierBricks.jpeg')
-    st.image(image, caption='Demo 3: Productividad Actual Vs Histórica. Planta Zamora 🏭')
+    st.image(image, caption='Demo Novus Mando: Monitor en Tiempo Real de Productividad Actual Vs Histórica. Alarmas y Recomendaciones para Planta Zamora 🏭')
 
 st.title('Central de Mando Piloto - Planta Zamora 🧱')
 
@@ -30,7 +30,6 @@ col2.metric("Abastecimiento hoy", "80%", "-8%")
 col3.metric("Costos Calderas hoy", "125%", "25%")
 col4.metric("Rentabilidad hoy", "15%", "3%")
 
-st.subheader('Plan de Producción Diario en Planta Zamora🏭')
 meta_zona_1 = 10290
 meta_zona_2 = 11986
 meta_zona_3 = 11368
@@ -40,9 +39,13 @@ meta_zona_6 = 5241
 meta_zona_7 = 3112
 meta_zona_8 = 110
 meta_zona_9 = 7338
-st.header('Ritmo de Producción por turnos para 9 productos')
+colored_header(
+    label="Producción Desagregada",
+    description="Por horas y productos",
+    color_name="violet-70",
+)
 options = {
-            "title": {"text": "Votos x Zonas"},
+            "title": {"text": "Cerámicas"},
             "tooltip": {
                 "trigger": "axis",
                 "axisPointer": {"type": "cross", "label": {"backgroundColor": "#6a7985"}},
