@@ -427,7 +427,11 @@ ST_HEATMAP_DEMOS = {
 render_heatmap_cartesian()
 
 
-st.subheader('Plan de Abastecimiento')
+colored_header(
+    label="Alarmas",
+    description="Operativas, Temporales y Climáticas",
+    color_name="violet-70",
+)
 
 my_grid = grid(3, 3, vertical_align="bottom")
 # Row 1:
@@ -436,9 +440,9 @@ my_grid.selectbox("Indica tipo de Proveedor", ["Local", "Inter Comunitario", "Eu
 my_grid.selectbox("Indica un Fecha", ["Hoy", "Mañana", "Próxima Semana"])
 
 # Row 2:
-my_grid.button("Activar Mensajes Equipos", use_container_width=True)
-my_grid.button("Activar Mensajes Proveedores", use_container_width=True)
-my_grid.button("Activar Mensajes Clientes", use_container_width=True)
+my_grid.button("Activar Protocolo Alarma a Equipos en Turno", use_container_width=True)
+my_grid.button("Activar Protocolo Alarma a Proveedores", use_container_width=True)
+my_grid.button("Activar Protocolo Alarma a Clientes", use_container_width=True)
 
    
 fig1 = go.Figure(data=[go.Sankey(
@@ -446,7 +450,7 @@ fig1 = go.Figure(data=[go.Sankey(
     pad = 15,
     thickness = 20,
     line = dict(color = "black", width = 0.5),
-    label = ["Fuente1", "Fuente2", "Fuente 3", "Proveedor_1", "Proveedor_2", "Producto1"],
+    label = ["Biomasa", "Coke", "Carbon", "Renovables", "Agua", "Calor"],
     color = "blue"
   ),
   link = dict(
