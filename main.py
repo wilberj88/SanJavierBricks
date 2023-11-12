@@ -454,7 +454,6 @@ if a and b and c:
         colz.metric("Renovables bajo", "15%", "3%")
         colz.metric("No Renovable", "17%", "3%")
     with coly:
-        
         st.subheader("Inflación Energética")
         def render_basic_radar():
             option = {
@@ -462,11 +461,11 @@ if a and b and c:
                 "legend": {"data": ["Renovables", "Mixto", "No Renovables"]},
                 "radar": {
                     "indicator": [
-                        {"name": "Zona 1", "max": 14000},
-                        {"name": "Zona 2", "max": 14000},
-                        {"name": "Zona 3", "max": 14000},
-                        {"name": "Zona 4", "max": 14000},
-                        {"name": "Zona 5", "max": 14000},
+                        {"name": "Agua", "max": 100},
+                        {"name": "Coke", "max": 100},
+                        {"name": "Biomasa", "max": 100},
+                        {"name": "Aire", "max": 100},
+                        {"name": "Solar", "max": 100},
                     ]
                 },
                 "series": [
@@ -475,16 +474,16 @@ if a and b and c:
                         "type": "radar",
                         "data": [
                             {
-                                "value": [10898, 12260, 10461, 13667, 11792],
-                                "name": "Ganador 2015",
+                                "value": [90, 0, 0, 90, 90],
+                                "name": "Renovables",
                             },
                             {
-                                "value": [7055, 6004, 5288, 6842, 7077],
-                                "name": "2do 2015",
+                                "value": [24, 50, 50, 5, 5],
+                                "name": "Mixto",
                             },
                             {
-                                "value": [2273, 2792, 2419, 2954, 2437],
-                                "name": "3ro 2015",
+                                "value": [10, 90, 90, 5, 5],
+                                "name": "No Renovables",
                             },
                         ],
                     }
