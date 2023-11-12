@@ -449,10 +449,10 @@ if a and b and c:
     colx, coly, colz = st.columns(3)
     with colx:
         st.subheader("Costo Financiación a 12 meses")
-        colz.metric("Renovables todo", "10%", "1%")
-        colz.metric("Renovables medio", "13%", "5%")
-        colz.metric("Renovables bajo", "15%", "3%")
-        colz.metric("No Renovable", "17%", "3%")
+        colx.metric("Renovables todo", "10%", "1%")
+        colx.metric("Renovables medio", "13%", "5%")
+        colx.metric("Renovables bajo", "15%", "3%")
+        colx.metric("No Renovable", "17%", "3%")
     with coly:
         st.subheader("Inflación Energética")
         def render_basic_radar():
