@@ -149,21 +149,24 @@ with col6:
                 },
             ],
         }
-    st_echarts(options=options, height="550px") 
+    st_echarts(options=options, height="600px") 
     
 with col7:
     meta = 35000
-    st.subheader("Último Turno")
+    st.subheader("Turno Actual Vs Último")
     option = {
     "xAxis": {
         "type": "category",
         "data": ["9am", "10am", "11am", "12md", "1pm", "2pm", "4pm"],
     },
     "yAxis": {"type": "value"},
-    "series": [{"data": [meta*0.1, meta*0.2, meta*0.35, meta*0.5, meta*0.75, meta*0.9, meta], "type": "line"}],
+    "series": [
+        {"data": [meta*0.1, meta*0.2, meta*0.35, meta*0.5, meta*0.75, meta*0.9, meta], "type": "line"},
+        {"data": [meta*0.15, meta*0.25, meta*0.4, meta*0.55, meta*0.75, meta*0.9, meta], "type": "line"},
+    ],
     }
     st_echarts(
-        options=option, height="550px",
+        options=option, height="600px",
     )
 
 
