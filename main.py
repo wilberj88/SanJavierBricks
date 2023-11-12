@@ -149,7 +149,7 @@ with col6:
                 },
             ],
         }
-    st_echarts(options=options, height="620px") 
+    st_echarts(options=options, height="600px") 
     
 with col7:
     meta = 35000
@@ -166,7 +166,7 @@ with col7:
     ],
     }
     st_echarts(
-        options=option, height="600px",
+        options=option, height="620px",
     )
 
 
