@@ -174,8 +174,8 @@ with col7:
 
     
 colored_header(
-    label="Alarmas",
-    description="Operativas, Temporales y Climáticas",
+    label="Cronograma Paradas de Planta Próxima Semana",
+    description="Horarios y Resultados Requeridos",
     color_name="violet-70",
 )
 
@@ -414,7 +414,7 @@ def render_heatmap_cartesian():
             }
         ],
     }
-    st_echarts(option, height="500px")
+    st_echarts(option, height="600px")
 
 
 ST_HEATMAP_DEMOS = {
