@@ -538,12 +538,6 @@ colored_header(
 
 
 
-picture = st.camera_input("Responde en 30 segundos cada una de las siguientes 10 preguntas: ¿____Bla Bla bla___?")
-
-if picture:
-    st.image(picture)
-    st.write('Cargar Respuesta 1 a 10 🤖')
-
 colx, coly, colz = st.columns(3)
 colx = st.checkbox('Aprobada Habilitación')
 coly = st.checkbox('Llegada a Turno')
