@@ -66,9 +66,7 @@ with col5:
             }
         ],
     }
-
     st_echarts(options=acelerometro2)
-    
     acelerometro1 = {
         "tooltip": {"formatter": "{a} <br/>{b} : {c}%"},
         "series": [
@@ -90,6 +88,7 @@ with col5:
     st_echarts(options=acelerometro1)
 
 with col6:
+    st.subheader("Por Tipo de Cerámica")
     options = {
             "title": {"text": "🧱"},
             "tooltip": {
@@ -150,10 +149,11 @@ with col6:
                 },
             ],
         }
-    st_echarts(options=options, height="500px") 
+    st_echarts(options=options, height="550px") 
     
 with col7:
     meta = 35000
+    st.subheader("Último Turno")
     option = {
     "xAxis": {
         "type": "category",
@@ -163,7 +163,7 @@ with col7:
     "series": [{"data": [meta*0.1, meta*0.2, meta*0.35, meta*0.5, meta*0.75, meta*0.9, meta], "type": "line"}],
     }
     st_echarts(
-        options=option, height="500px",
+        options=option, height="550px",
     )
 
 
