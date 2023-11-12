@@ -19,7 +19,7 @@ with st.sidebar:
     image = Image.open('SanJavierBricks.jpeg')
     st.image(image, caption='Demo 3: Productividad Actual Vs Histórica. Planta Zamora 🏭')
 
-st.title('Novus - Prototipo Propuesta Borrador 🧱')
+st.title('Central de Mando Piloto - Planta Zamora 🧱')
 
 st.write('---')
 
