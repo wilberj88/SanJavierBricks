@@ -497,7 +497,7 @@ if a and b and c:
             pad = 15,
             thickness = 20,
             line = dict(color = "black", width = 0.5),
-            label = ["Carbon", "Coke", "Biomasa", "No Renovable", "Renovable", "Calor"],
+            label = ["Carbon", "Biomasa", "Coke", "No Renovable", "Renovable", "Calor"],
             color = "blue"
           ),
           link = dict(
