@@ -48,6 +48,7 @@ meta_zona_9 = 7338
 
 col5, col6, col7 = st.columns(3)
 with col5:
+    st.subheader("Calderas")
     acelerometro2 = {
         "tooltip": {"formatter": "{a} <br/>{b} : {c}%"},
         "series": [
