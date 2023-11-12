@@ -590,8 +590,8 @@ option = {
             }
         ],
     }
-    st_echarts(
-        options=option, height="600px",
-    )
+st_echarts(
+    options=option, height="600px",
+)
 
 
