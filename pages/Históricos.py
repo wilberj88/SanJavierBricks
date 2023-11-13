@@ -22,21 +22,21 @@ with st.sidebar:
 st.title('Central de Datos Históricos - Planta Zamora 🧱')
 
 
-st.write("Resultados E-14 por Zonas")
+st.header("Producción Anual por Productos")
 options = {
     "tooltip": {"trigger": "axis", "axisPointer": {"type": "shadow"}},
     "legend": {
-        "data": ["Ganador_Ramirez", "2do_Gonzalez", "3ro_Fernandez"]
+        "data": ["2020", "2021", "2022"]
     },
     "grid": {"left": "3%", "right": "4%", "bottom": "3%", "containLabel": True},
     "xAxis": {"type": "value"},
     "yAxis": {
         "type": "category",
-        "data": ["Zona 1", "Zona 2", "Zona 3", "Zona 4", "Zona 5", "Zona 6", "Zona 7", "Zona 8", "Zona 9"],
+        "data": ["Cerámica_1", "Cerámica_2", "Cerámica_3", "Cerámica_4", "Cerámica_5", "Cerámica_6", "Cerámica_7", "Cerámica_8", "Cerámica_9"],
     },
     "series": [
         {
-            "name": "Ganador_Ramirez",
+            "name": "2020",
             "type": "bar",
             "stack": "total",
             "label": {"show": True},
@@ -44,7 +44,7 @@ options = {
             "data": [10898, 12260, 10461, 13667, 11792, 4659, 4364, 152, 5931],
         },
         {
-            "name": "2do_Gonzalez",
+            "name": "2021",
             "type": "bar",
             "stack": "total",
             "label": {"show": True},
@@ -52,7 +52,7 @@ options = {
             "data": [7055, 6004, 5288, 6842, 7077, 4127, 2267, 58, 3337],
         },
         {
-            "name": "3ro_Fernandez",
+            "name": "2022",
             "type": "bar",
             "stack": "total",
             "label": {"show": True},
